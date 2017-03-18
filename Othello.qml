@@ -56,9 +56,12 @@ Item {
                 cx += dx
                 cy += dy
 
-                if(!((0 <= cx < fieldSize) && (0 <= cy < fieldSize))){
+                if(!((0 <= cx && cx < fieldSize) && (0 <= cy && cy < fieldSize))){
                     break;
                 }
+                console.log("cx:"+cx)
+                console.log("cy:"+cy)
+
                 var SqState = getSquareState(xyToIndex(cx,cy))
 
                 //マスが空だった場合
@@ -70,6 +73,7 @@ Item {
                     if(vecFlag){
                         flag = true
                         Vflag = true
+                        break;
                     }else{
                         break;
                     }
@@ -79,6 +83,7 @@ Item {
                 }
             }
             if(Vflag){
+                //もしひっくり返せる方向があったらsetVecに何番目だったかをpush
                 setVec.push(V)
             }
 

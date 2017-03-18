@@ -4,11 +4,22 @@ import QtQuick.Window 2.2
 Window {
     id: window
     visible: true
-    width: 640
-    height: 480
+    width: 480
+    height: 213
     title: qsTr("Othello")
 
-    Othello {
-        size: window.height
+    Column {
+        Rectangle {
+            width: window.width
+            height: window.height - window.width
+            Text {
+                id: name
+                text: qsTr("text")
+            }
+        }
+
+        Othello {
+            size: window.height < window.width ? window.height : window.width
+        }
     }
 }
