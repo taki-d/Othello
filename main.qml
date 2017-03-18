@@ -9,7 +9,6 @@ Window {
     title: qsTr("Othello")
 
     Othello {
-        size: window.width
+        size: window.height
     }
-
 }

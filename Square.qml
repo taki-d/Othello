@@ -5,6 +5,9 @@ Item {
 
     property int squareStatus: 0
     property int squareSize: 100
+    property int position: 0
+
+    signal onClickedSquare(int index);
 
     width: squareSize
     height: squareSize
@@ -28,6 +31,8 @@ Item {
                 anchors.fill: parent
                 onClicked: {
                     console.log("clicked")
+                    console.log("Pos:" + position)
+                    onClickedSquare(position)
                 }
             }
         }
