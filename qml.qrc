@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>Square.qml</file>
+        <file>Othello.qml</file>
     </qresource>
 </RCC>

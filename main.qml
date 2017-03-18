@@ -8,18 +8,8 @@ Window {
     height: 480
     title: qsTr("Othello")
 
-    Column {
-        Repeater {
-            model: 8
-            Row {
-                Repeater {
-                    model: 8
-                    Square {
-                        squareStatus: 1
-                        size: window.width / 8
-                    }
-                }
-            }
-        }
+    Othello {
+        size: window.width
     }
+
 }
